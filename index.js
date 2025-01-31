@@ -186,7 +186,7 @@ let products = [
   {
     id: 17,
     name: 'Google Mi 11',
-    brand: 'Oppo',
+    brand: 'Google',
     price: 70000,
     ram: 6,
     rom: 64,
@@ -197,7 +197,7 @@ let products = [
   {
     id: 18,
     name: 'Google OnePlus 9',
-    brand: 'Apple',
+    brand: 'Google',
     price: 20000,
     ram: 4,
     rom: 64,
