@@ -238,7 +238,7 @@ function sortProductsByPopularity(product1, product2) {
 app.get('/products/sort/popularity', (req, res) => {
   let productsCopy = products.slice();
   productsCopy.sort(sortProductsByPopularity);
-  res.json(productsCopy);
+  res.json({productsCopy});
 });
 
 //2. Get the products sorted by “high-to-low” price
@@ -250,7 +250,7 @@ function sortProductsByPrice(product1, product2) {
 app.get('/products/sort/price-high-to-low', (req, res) => {
   let productsCopy = products.slice();
   productsCopy.sort(sortProductsByPrice);
-  res.json(productsCopy);
+  res.json({productsCopy});
 });
 
 //3.  Get the products sorted by “low-to-high” price
@@ -262,7 +262,7 @@ function sortProductsByPriceLow(product1, product2) {
 app.get('/products/sort/price-low-to-high', (req, res) => {
   let productsCopy = products.slice();
   productsCopy.sort(sortProductsByPriceLow);
-  res.json(productsCopy);
+  res.json({productsCopy});
 });
 
 //4.  Filter the products based on the “RAM” option
@@ -274,7 +274,7 @@ function filterByRam(product, ram) {
 app.get('/products/filter/ram', (req, res) => {
   let ram = parseFloat(req.query.ram);
   let result = products.filter((product) => filterByRam(product, ram));
-  res.json(result);
+  res.json({result});
 });
 
 //5. Filter the products based on the “ROM” option.
@@ -286,7 +286,7 @@ function filterByRom(product, rom) {
 app.get('/products/filter/rom', (req, res) => {
   let rom = parseFloat(req.query.rom);
   let result = products.filter((product) => filterByRom(product, rom));
-  res.json(result);
+  res.json({result});
 });
 
 //6. Filter the products based on the “Brand” option
@@ -322,7 +322,7 @@ function filterByPrice(product, price) {
 app.get('/products/filter/price', (req, res) => {
   let price = parseFloat(req.query.price);
   let result = products.filter((product) => filterByPrice(product, price));
-  res.json(result);
+  res.json({result});
 });
 
 //9. Send original array of products
