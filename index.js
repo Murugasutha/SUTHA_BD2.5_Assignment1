@@ -328,7 +328,7 @@ app.get('/products/filter/price', (req, res) => {
 //9. Send original array of products
 
 app.get('/products', (req, res) => {
-  res.json(products);
+  res.json({products});
 });
 
 app.listen(port, () => {
