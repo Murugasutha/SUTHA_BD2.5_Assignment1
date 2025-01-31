@@ -238,7 +238,7 @@ function sortProductsByPopularity(product1, product2) {
 app.get('/products/sort/popularity', (req, res) => {
   let productsCopy = products.slice();
   productsCopy.sort(sortProductsByPopularity);
-  res.json({productsCopy});
+  res.json(productsCopy);
 });
 
 //2. Get the products sorted by “high-to-low” price
